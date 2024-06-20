@@ -5,8 +5,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 app = Flask(__name__, static_folder='templates')
 
-client_id = 'b5ee7d8e74d4436ab2c023cb7a0e9c54'
-client_secret = 'dbfc0eef9eda45efa893720e0560b55c'
+client_id = 'your_client_id'
+client_secret = 'your_client_secret'
 
 # Authenticate
 auth_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
