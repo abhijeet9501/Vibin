@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vibin</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div id="logo">
+        <h1>Vibin</h1>
+    </div>
+
+    <div id="search">
+        <form id="searchForm">
+            <input type="text" id="songName" name="songName" placeholder="Enter {track name} by {artist name}">
+            <button id="submit" type="submit"><span class="material-symbols-outlined">
+                search
+            </span></button>
+        </form>
+    </div>
+    
+    <div class="main">
+        <div class="card">
+            <div id="thumbnail">
+                <img id="thumbnailImg" src="https://avatarfiles.alphacoders.com/375/thumb-1920-375148.png" alt="Thumbnail">
+                <p id="songTitle"></p> 
+                <div id="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+
+            <div class="player">
+                <audio id="audioPlayer" controls autoplay>
+                    Your browser does not support the audio element.
+                </audio>
+                <button id="nextButton"><span class="material-symbols-outlined">
+                    skip_next
+                    </span></button>
+            </div>
+        
+        </div>
+        
+    </div>
+    
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
